@@ -19,7 +19,14 @@ def euler(f, x, t, h):
 
 
 def rk4(f, x, t, h):
-    """Perform one step of the RK$ method"""
+    def f(x, t):
+        return x
+    k1 = f(x, t)
+    k2 = f(x + k1 * h * 0.5, t + h * 0.5)
+    k3 = f(x + k2 * h * 0.5, t + h * 0.5)
+    k4 = f(x + k3 * h, t + h)
+    xn1 = x + (k1 + 2 * k2 + 2 * k3 + k4) * (h / 6)
+    return xn1
     pass
 
 
