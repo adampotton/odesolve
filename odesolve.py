@@ -31,7 +31,11 @@ def rk4(f, x, t, h):
 
 
 def solveto(f, x1, t1, t2, hmax, method=euler):
-    """Use many steps of method to get from x1,t1 to x2,t2"""
+    def f(x, t):
+        return x
+    
+    
+    
     pass
 
 
