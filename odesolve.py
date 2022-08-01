@@ -11,8 +11,8 @@ import numpy as np
 
 def euler(f, x, t, h):
     def f(x, t):
-        return x
-    return x + f(x, t) * h
+        return x + t
+    return x + h * f(x, t)
     pass
 
 
