@@ -7,6 +7,8 @@
 # You should fill out the code for the functions below so that they pass the
 # tests in test_odesolve.py
 
+import numpy as np
+
 def euler(f, x, t, h):
     def f(x, t):
         return x
