@@ -8,7 +8,7 @@
 # tests in test_odesolve.py
 
 def euler(f, x, t, h):
-    """Perform one step of the Euler method"""
+    """Perform one step of the Euler method""" Test
     pass
 
 
