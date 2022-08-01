@@ -9,6 +9,8 @@
 
 import numpy as np
 
+f = 0
+
 def euler(f, x, t, h):
     def f(x, t):
         return x + t
