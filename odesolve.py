@@ -12,8 +12,6 @@ import numpy as np
 f = 0
 
 def euler(f, x, t, h):
-    def f(x, t):
-        return x + t
     return x + h * f(x, t)
     pass
 
@@ -31,8 +29,8 @@ def rk4(f, x, t, h):
 
 
 def solveto(f, x1, t1, t2, hmax, method=euler):
-    def f(x, t):
-        return x
+    while t1 <= t2
+        x1 = euler(f, x1, t, h)
     
     
     
