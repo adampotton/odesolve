@@ -33,7 +33,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
         x1 = euler(f, x1, t1, hmax)
         t = t1 + hmax
         final = t2 - t1
-        if t1 == t2
+        if t1 == t2:
             break
     return euler(f, x1, t, final)
     pass
