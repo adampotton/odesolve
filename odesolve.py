@@ -39,7 +39,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
             elif t1 > t2:
                 hmin = t2 - t1 + hmax
                 tn = t1 - hmax
-                return xn + f(xn, tn) * hmin
+                return euler(f, x2, tn, hmax)
     elif md == rk4:
         while t1 <= t2:
             xn = x1
