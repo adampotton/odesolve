@@ -34,7 +34,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
     for i in range(n):
         g = x1 
         xn = x1 + hmax * g
-        x1 = round(x1, ndigits=8)
+        x1 = xn
     if n % 1:
         return x1
     else:
