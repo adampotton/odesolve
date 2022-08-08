@@ -56,18 +56,28 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
 
 
 def odesolve(f, X0, t, hmax, method=euler):
-    if isinstance(X0, np.ndarray):
-        el = [ ]
-        for A in t:
-            el.append(solveto(f, X0, 0, A, hmax, md))
-        return np.array(el)
-    el = [ ]
-    for B in X0:
-        el2 = [ ]
-        for C in t:
-            el2.append(solveto(f, B, 0, C, hmax, md))
-        el.append(el2)
-    return np.array(el)
+    A = 0
+    md = method
+    t1 = np.array(t); B = (t[-1] - t[0] ) / t[1] + 1   
+    x1 = X0[0]
+    el = []
+    if md == euler:
+        while A < B :
+            x2 = solveto(f, x1, t1[A], t[-1], hmax, euler)
+            A = A + 1
+            el.insert(0, x2)         
+        ar = np.array(el)
+        xm = np.mat(ar)                 
+        return xm
+            
         
+    if md == rk4:
+        while A < B:
+            x2 = solveto(f, x1, t1[A], t[-1], hmax, rk4)
+            A = A + 1
+            el.insert(0, x2)
+        ar = np.array(el)
+        xm = np.mat(ar)
+        return xm
         
     pass
