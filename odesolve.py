@@ -28,20 +28,20 @@ def rk4(f, x, t, h):
 
 
 def solveto(f, x1, t1, t2, hmax, method=euler):
-    n = int((t2 - t1) / hmax)
+    n = t2 - t1) / hmax
     nfull = math.floor(n)
     hsmall = (t2 - t1) - (nfull * hmax)
     for i in range(n):
         g = x1 
         xn = x1 + hmax * g
         x1 = xn
-    if 1 % n:
+    if n % 1:
         return x1
     else:
         g = x1 
         xn = x1 + hsmall * g
         x1 = xn
-        #x1 = round(x1, ndigits=4)
+        x1 = round(x1, ndigits=4)
         return x1
     pass
 
