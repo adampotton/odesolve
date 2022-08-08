@@ -27,7 +27,7 @@ def rk4(f, x, t, h):
     pass
 
 
-def solveto(f, x1, t1, t2, hmax, method=euler):
+def solveto(f, x1, t1, t2, hmax, method):
     md = method
     if md == euler:
         while t1 <= t2:
@@ -57,15 +57,15 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
 
 def odesolve(f, X0, t, hmax, method=euler):
     if isinstance(X0, np.ndarray):
-        el = []
+        el = [ ]
         for A in t:
-            el.append(solveto(f, X0, 0, A, hmax, method))
+            el.append(solveto(f, X0, 0, A, hmax, md))
         return np.array(el)
-    el = []
+    el = [ ]
     for B in X0:
-        el2 = []
+        el2 = [ ]
         for C in t:
-            el2.append(solveto(f, B, 0, C, hmax, method))
+            el2.append(solveto(f, B, 0, C, hmax, md))
         el.append(el2)
     return np.array(el)
         
