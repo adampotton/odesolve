@@ -27,7 +27,7 @@ def rk4(f, x, t, h):
     pass
 
 
-def solveto(f, x1, t1, t2, hmax, method):
+def solveto(f, x1, t1, t2, hmax, method=euler):
     md = method
     if md == euler:
         while t1 <= t2:
