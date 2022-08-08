@@ -28,16 +28,16 @@ def rk4(f, x, t, h):
 
 
 def solveto(f, x1, t1, t2, hmax, method=euler):
-    while t1 < t2:
+    while t1 <= t2:
         xn = x1
         x1 = euler(f, x1, t1, hmax)
         t1 = t1 + hmax
         if t1 == t2:
             return x1
         elif t1 > t2:
-            hsmall = t2 - t1 + hmax
+            hmin = t2 - t1 + hmax
             tn = t1 - hmax
-            return xn + f(xn, tn) * hsmall
+            return xn + f(xn, tn) * hmin
     
 
 
