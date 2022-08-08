@@ -36,7 +36,6 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
         xn = x1 + hmax * g
         x1 = xn
     if n % 1:
-        x1 = round(x1, 8)
         return x1
     else:
         g = x1 
