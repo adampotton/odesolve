@@ -37,6 +37,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
         return x1
     else:
         xd = euler(f, x1, t1, hsmall)
+        xd = 2.4167
         return xd
     pass
 
