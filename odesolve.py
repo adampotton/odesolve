@@ -60,7 +60,7 @@ def odesolve(f, X0, t, hmax, method=euler):
         el = []
         for A in t:
             el.append(solveto(f, X0, 0, A, hmax, method))
-        return np.array(result)
+        return np.array(el)
     el = []
     for B in X0:
         el2 = []
