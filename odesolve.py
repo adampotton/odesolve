@@ -38,12 +38,12 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
         t1 = t1 + hmax
     if n % 1:
         return x1
-    else:
+    """else:
         g = x1 + t1
         xn = x1 + hsmall * x1
         x1 = xn
         t1 = t1 + hsmall
-        return x1
+        return x1"""
     pass
 
 
