@@ -132,6 +132,4 @@ print(passed, 'tests passed out of', len(test_functions), 'tests')
 
 if failed:
     print(func.__name__, 'failed with exception:')
-    raise exc from None
-
-print(x1)
+    raise exc from Non
