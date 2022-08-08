@@ -43,7 +43,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
         xn = x1 + hsmall * x1
         x1 = xn
         t1 = t1 + hsmall
-        x1 = round(x1, ndigit=4)
+        x1 = round(x1, ndigits=4)
         return x1
     pass
 
