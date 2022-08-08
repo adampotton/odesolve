@@ -36,7 +36,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
     if 1 % n:
         return x1
     else:
-        x1 = euler(f, x1, t1, hmin)
+        x1 = euler(f, x1, t1, hsmall)
         return x1
     pass
 
