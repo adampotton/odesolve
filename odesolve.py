@@ -32,7 +32,7 @@ def rk4(f, x, t, h):
 def solveto(f, x1, t1, t2, hmax, method=euler):
     n = int((t2 - t1) / hmax)
     if n % 1:
-        for i in range(n)
+        for i in range(n):
             g = euler(f, x1, t1, hmax)
             xn = x1 + hmax * g
             x1 = xn
