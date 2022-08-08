@@ -40,7 +40,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
         return x1
     else:
         g = x1 + t1
-        xn = x1 + hsmall * g
+        xn = x1 + hsmall * x1
         x1 = xn
         t1 = t1 + hsmall
         return x1
