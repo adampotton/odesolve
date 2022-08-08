@@ -32,10 +32,10 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
     nfull = math.floor(n)
     hsmall = (t2 - t1) - (nfull * hmax)
     tn = t1
+    xn = x1
     for i in range(n):
-        g = xn + t1
-        xn = x1 + hmax * g
-        x1 = xn
+        g = xn + tn
+        xn = xn + hmax * g
         tn = tn + hmax
         if n % 1:
             return x1
