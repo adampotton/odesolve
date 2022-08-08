@@ -33,7 +33,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
     hsmall = (t2 - t1) - (nfull * hmax)
     for i in range(n):
         slope = x1 + t1
-        xn = x0 + hmax * slope
+        xn = x1 + hmax * slope
         x1 = xn
         t1 = t1 + hmax
         if n % 1:
