@@ -10,8 +10,6 @@
 import numpy as np
 import math
 
-f = 0
-
 def euler(f, x, t, h):
     return x + h * f(x, t)
     pass
