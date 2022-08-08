@@ -37,7 +37,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
         elif t1 > t2:
             hsmall = t2 - t1 + hmax
             tn = t1 - hmax
-            return x2 + f(x2, tn) * small
+            return xn + f(x2, tn) * small
     
 
 
