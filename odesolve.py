@@ -38,14 +38,14 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
         xn = x1 + hmax * g
         x1 = xn
         t1 = t1 + hmax
-    g = euler(f, x1, t1, hsmall)
-    xn = x1 + hsmall * g
-    x1 = xn
-    t1 = t1 + hsmall
-         
-            
-       
-    return x1
+        if n % 1:
+            return x1
+        else:
+            g = euler(f, x1, t1, hsmall)
+            xn = x1 + hsmall * g
+            x1 = xn
+            t1 = t1 + hsmall
+            return x1
     pass
 
 
