@@ -31,7 +31,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
     n = int((t2 - t1) / hmax)
     nfull = math.floor(n)
     hsmall = (t2 - t1) - (nfull * hmax)
-    while t1 > t2
+    while t1 > t2:
         g = x1 + t1
         xn = x1 + hmax * g
         x1 = xn
