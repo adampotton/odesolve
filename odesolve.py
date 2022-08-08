@@ -79,5 +79,4 @@ def odesolve(f, X0, t, hmax, method=euler):
         ar = np.array(el)
         xm = np.mat(ar)
         return xm
-        
     pass
