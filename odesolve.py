@@ -51,9 +51,23 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
                 hmin = t2 - t1 + hmax
                 t1 = t1 - hmax
                 return rk4(f, xn, t1, hmin)
+    pass
     
 
 
 def odesolve(f, X0, t, hmax, method=euler):
-    """Compute the solution at different values of t"""
+    if isinstance(X0, np.ndarray):
+        el = []
+        for A in t:
+            el.append(solveto(f, X0, 0, A, hmax, method))
+        return np.array(result)
+    el = []
+    for B in X0:
+        el2 = []
+        for C in t:
+            result_x.append(solveto(f, B, 0, C, hmax, method))
+        result.append(el2)
+    return np.array(el)
+        
+        
     pass
