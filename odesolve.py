@@ -36,10 +36,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
         xn = x1 + hmax * g
         x1 = xn
     if n % 1:
-        if x1 == 0 or 2 or 2.25:
-            return x1
-        else:
-            return 2.44140625
+        return x1
     else:
         g = x1 
         xn = x1 + hsmall * g
