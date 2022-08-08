@@ -28,9 +28,9 @@ def test_solveto():
     def f(x, t):
         return x
 
-    assert solveto(f, 0, 0, 1, 1) == 0
-    assert solveto(f, 1, 0, 1, 1) == 2
-    assert solveto(f, 1, 0, 1, 0.5) == 2.25
+    assert solveto(f, 0, 0, 1, 1) == 0.00000000
+    assert solveto(f, 1, 0, 1, 1) == 2.00000000
+    assert solveto(f, 1, 0, 1, 0.5) == 2.25000000
     assert solveto(f, 1, 0, 1, 0.25) == 2.44140625
     assert solveto(f, 1, 0, 1, 0.3) == 2.4167
 
@@ -132,4 +132,4 @@ print(passed, 'tests passed out of', len(test_functions), 'tests')
 
 if failed:
     print(func.__name__, 'failed with exception:')
-    raise exc from Non
+    raise exc from None
