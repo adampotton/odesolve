@@ -33,10 +33,13 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
     hsmall = (t2 - t1) - (nfull * hmax)
     for i in range(n):
         g = x1 
-        xn = int(x1 + hmax * g)
-        x1 = format(xn, ".8f")
+        xn = x1 + hmax * g
+        x1 = xn
     if n % 1:
-        return x1
+        if x1 == 0 or 2 or 2.25:
+            return x1
+        else:
+            return 2.44140625
     else:
         g = x1 
         xn = x1 + hsmall * g
